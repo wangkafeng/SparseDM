@@ -1,0 +1,7 @@
+pip install torch==2.2.2 torchvision==0.17.2 torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cu118
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple accelerate==0.12.0
+pip install triton==2.2.0
+pip install -i https://pypi.tuna.tsinghua.edu.cn/simple scipy wandb
+
+A40 * 4
+accelerate launch --multi_gpu --num_processes 4 --mixed_precision fp16 eval.py --config=configs/cifar10_uvit_small.py --nnet_path=cifar10_uvit_small.pth
