@@ -1,5 +1,6 @@
 Our method mainly refers to https://github.com/baofff/U-ViT
 Pretrained model from U-ViT.
+The code running environment and datasets are the same as those of U-ViT.
 
 1. Progressive Traning.
 CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 nohup accelerate launch --multi_gpu --num_processes 8 --main_process_port 20639 --mixed_precision fp16 train_c10_multi_step.py --config=configs/cifar10_uvit_small_multi_step.py > output/cifar10_uvit_small_multi_step.txt & 
