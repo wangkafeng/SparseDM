@@ -1,3 +1,5 @@
+SparseDM: Toward Sparse Efficient Diffusion Models
+
 Sparse_Training
 The training sparse model
 
